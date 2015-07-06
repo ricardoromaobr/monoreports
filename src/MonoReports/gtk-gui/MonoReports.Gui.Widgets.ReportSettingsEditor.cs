@@ -5,8 +5,11 @@ namespace MonoReports.Gui.Widgets
 	public partial class ReportSettingsEditor
 	{
 		private global::Gtk.VBox vbox2;
+		
 		private global::PropertyGrid.PropertyGrid reportPropertygrid;
+		
 		private global::Gtk.Button buttonCancel;
+		
 		private global::Gtk.Button buttonOk;
 
 		protected virtual void Build ()

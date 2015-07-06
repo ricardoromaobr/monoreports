@@ -5,32 +5,59 @@ namespace MonoReports.Gui.Widgets
 	public partial class MonoreportsDesignerControl
 	{
 		private global::Gtk.UIManager UIManager;
+		
 		private global::Gtk.Action FileAction;
+		
 		private global::Gtk.Action FileAction1;
+		
 		private global::Gtk.Action quitAction;
+		
 		private global::Gtk.Action HelpAction;
+		
 		private global::Gtk.Action HelpAction1;
+		
 		private global::Gtk.Action executeAction;
+		
 		private global::Gtk.Action aboutAction;
+		
 		private global::Gtk.Action zoomFitAction;
+		
 		private global::Gtk.Action openAction;
+		
 		private global::Gtk.Action saveAction;
+		
 		private global::Gtk.Action executeAction1;
+		
 		private global::Gtk.Action dialogErrorAction;
+		
 		private global::Gtk.ToggleAction editAction;
+		
 		private global::Gtk.Action sortAscendingAction;
+		
 		private global::Gtk.Action EditAction;
+		
 		private global::Gtk.Action ReportSettingsAction;
+		
 		private global::Gtk.VBox mainVbox;
+		
 		private global::Gtk.MenuBar mainMenubar;
+		
 		private global::Gtk.Toolbar mainToolbar;
+		
 		private global::Gtk.HBox contentHbox;
+		
 		private global::Gtk.HPaned mainHPaned;
+		
 		private global::MonoReports.Gui.Widgets.MainDesignView maindesignview1;
+		
 		private global::Gtk.VPaned rightVPaned;
+		
 		private global::MonoReports.Gui.Widgets.ReportExplorer reportExplorer;
+		
 		private global::PropertyGrid.PropertyGrid mainPropertygrid;
+		
 		private global::Gtk.Statusbar bottomStatusbar;
+		
 		private global::Gtk.Label StatusBarLabel;
 
 		protected virtual void Build ()
@@ -89,7 +116,7 @@ namespace MonoReports.Gui.Widgets
 			this.mainVbox.Name = "mainVbox";
 			this.mainVbox.Spacing = -1;
 			// Container child mainVbox.Gtk.Box+BoxChild
-			this.UIManager.AddUiFromString ("<ui><menubar name='mainMenubar'><menu name='FileAction1' action='FileAction1'><menuitem name='openAction' action='openAction'/><menuitem name='saveAction' action='saveAction'/><menuitem name='quitAction' action='quitAction'/></menu><menu name='EditAction' action='EditAction'><menuitem name='ReportSettingsAction' action='ReportSettingsAction'/></menu><menu name='HelpAction1' action='HelpAction1'><menuitem name='aboutAction' action='aboutAction'/></menu></menubar></ui>");
+			this.UIManager.AddUiFromString (@"<ui><menubar name='mainMenubar'><menu name='FileAction1' action='FileAction1'><menuitem name='openAction' action='openAction'/><menuitem name='saveAction' action='saveAction'/><menuitem name='quitAction' action='quitAction'/></menu><menu name='EditAction' action='EditAction'><menuitem name='ReportSettingsAction' action='ReportSettingsAction'/></menu><menu name='HelpAction1' action='HelpAction1'><menuitem name='aboutAction' action='aboutAction'/></menu></menubar></ui>");
 			this.mainMenubar = ((global::Gtk.MenuBar)(this.UIManager.GetWidget ("/mainMenubar")));
 			this.mainMenubar.Name = "mainMenubar";
 			this.mainVbox.Add (this.mainMenubar);
@@ -98,7 +125,7 @@ namespace MonoReports.Gui.Widgets
 			w3.Expand = false;
 			w3.Fill = false;
 			// Container child mainVbox.Gtk.Box+BoxChild
-			this.UIManager.AddUiFromString ("<ui><toolbar name='mainToolbar'/></ui>");
+			this.UIManager.AddUiFromString ("<ui><toolbar name=\'mainToolbar\'/></ui>");
 			this.mainToolbar = ((global::Gtk.Toolbar)(this.UIManager.GetWidget ("/mainToolbar")));
 			this.mainToolbar.Name = "mainToolbar";
 			this.mainToolbar.ShowArrow = false;

@@ -5,13 +5,21 @@ namespace MonoReports.Gui.Widgets
 	public partial class PropertyFieldEditor
 	{
 		private global::Gtk.Table table1;
+		
 		private global::Gtk.ComboBox combobox1;
+		
 		private global::Gtk.Label dafValueLabel;
+		
 		private global::Gtk.Entry defaultValueEntry;
+		
 		private global::Gtk.Label label1;
+		
 		private global::Gtk.Label label3;
+		
 		private global::Gtk.Entry nameEntry;
+		
 		private global::Gtk.Button buttonCancel;
+		
 		private global::Gtk.Button buttonOk;
 
 		protected virtual void Build ()

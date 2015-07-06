@@ -5,23 +5,41 @@ namespace MonoReports.Gui.Widgets
 	public partial class MainDesignView
 	{
 		private global::Gtk.UIManager UIManager;
+		
 		private global::Gtk.Action executeAction;
+		
 		private global::Gtk.Notebook mainNotebook;
+		
 		private global::Gtk.ScrolledWindow designScrolledWindow;
+		
 		private global::Gtk.DrawingArea drawingarea;
+		
 		private global::Gtk.Label designTitleLabel;
+		
 		private global::Gtk.VBox previewVbox;
+		
 		private global::Gtk.ScrolledWindow previewScrolledWindow;
+		
 		private global::Gtk.DrawingArea previewDrawingArea;
+		
 		private global::Gtk.Toolbar previewToolbar;
+		
 		private global::Gtk.Label previewTitleLabel;
+		
 		private global::Gtk.VBox vbox2;
+		
 		private global::Gtk.VPaned vpaned1;
+		
 		private global::Gtk.ScrolledWindow GtkScrolledWindow;
+		
 		private global::Gtk.TextView codeTextview;
+		
 		private global::Gtk.ScrolledWindow GtkScrolledWindow1;
+		
 		private global::Gtk.TextView outputTextview;
+		
 		private global::Gtk.Toolbar toolbar1;
+		
 		private global::Gtk.Label datasourceLabel;
 
 		protected virtual void Build ()
@@ -86,7 +104,7 @@ namespace MonoReports.Gui.Widgets
 			global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.previewVbox [this.previewScrolledWindow]));
 			w10.Position = 0;
 			// Container child previewVbox.Gtk.Box+BoxChild
-			this.UIManager.AddUiFromString ("<ui><toolbar name='previewToolbar'/></ui>");
+			this.UIManager.AddUiFromString ("<ui><toolbar name=\'previewToolbar\'/></ui>");
 			this.previewToolbar = ((global::Gtk.Toolbar)(this.UIManager.GetWidget ("/previewToolbar")));
 			this.previewToolbar.Name = "previewToolbar";
 			this.previewToolbar.ShowArrow = false;
@@ -139,7 +157,8 @@ namespace MonoReports.Gui.Widgets
 			global::Gtk.Box.BoxChild w17 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.vpaned1]));
 			w17.Position = 0;
 			// Container child vbox2.Gtk.Box+BoxChild
-			this.UIManager.AddUiFromString ("<ui><toolbar name='toolbar1'><toolitem name='executeAction' action='executeAction'/></toolbar></ui>");
+			this.UIManager.AddUiFromString ("<ui><toolbar name=\'toolbar1\'><toolitem name=\'executeAction\' action=\'executeAction" +
+			"\'/></toolbar></ui>");
 			this.toolbar1 = ((global::Gtk.Toolbar)(this.UIManager.GetWidget ("/toolbar1")));
 			this.toolbar1.Name = "toolbar1";
 			this.toolbar1.ShowArrow = false;

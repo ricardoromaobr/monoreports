@@ -5,6 +5,7 @@ namespace MonoReports.Gui.Widgets
 	public partial class ReportExplorer
 	{
 		private global::Gtk.ScrolledWindow GtkScrolledWindow;
+		
 		private global::Gtk.TreeView exporerTreeview;
 
 		protected virtual void Build ()

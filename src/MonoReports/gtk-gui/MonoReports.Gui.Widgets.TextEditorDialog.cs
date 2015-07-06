@@ -5,8 +5,11 @@ namespace MonoReports.Gui.Widgets
 	public partial class TextEditorDialog
 	{
 		private global::Gtk.ScrolledWindow GtkScrolledWindow;
+		
 		private global::Gtk.TextView textview;
+		
 		private global::Gtk.Button buttonCancel;
+		
 		private global::Gtk.Button buttonOk;
 
 		protected virtual void Build ()

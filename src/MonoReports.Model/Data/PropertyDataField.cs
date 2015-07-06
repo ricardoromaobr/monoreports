@@ -29,57 +29,63 @@ using System.Linq.Expressions;
 
 namespace MonoReports.Model.Data
 {
-	public class PropertyDataField<T,K> : Field
-	{
+		public class PropertyDataField<T,K> : Field
+		{
 		
 		 
-		public PropertyDataField(){
+				public PropertyDataField ()
+				{
 			 
-		}
-		
-		public PropertyDataField(ParameterExpression root, Expression parent,string propertyName) {
-			Expression<Func<T,K>> lambda = null;
-			Type t = typeof(T);
-			Type k = typeof(K);
-			if(t == k && t.IsPrimitive || t == typeof(string) || t == typeof(DateTime)){
-				lambda = (K x) =>  x; 
-			}
-			else {
-				lambda = Expression.Lambda<Func<T,K>>(Expression.Property(parent,propertyName),root);
-			}
-			
-			compiledMethod = lambda.Compile();
-			expression = lambda;			
-		}
-		
-		object defaultValue;
-		public override  object DefaultValue {
-			get { return defaultValue; }
-			set { defaultValue = value; }
-		}
+				}
 
-		public override  string GetValue (object current, string format)
-		{			
-			if (compiledMethod == null) {	
-				Compile();				 
-			}
+				public PropertyDataField (ParameterExpression root, Expression parent, string propertyName)
+				{
+						Expression<Func<T,K>> lambda = null;
 			
-			string returnVal = String.Empty;
+						Type t = typeof(T);
+						Type k = typeof(K);
+
+						if (t == k && t.IsPrimitive || t == typeof(string) || t == typeof(DateTime)) {
+
+								lambda = Expression.Lambda<Func<T,K>> (root,root);	
+						} else {
+								lambda = Expression.Lambda<Func<T,K>> (Expression.Property (parent, propertyName), root);
+						}
 			
-			try{
-				returnVal =  String.Format(format != null ? format : "{0}",compiledMethod((T)current) );
-			}catch(Exception exp){
-				Console.WriteLine(exp);
-			}
+						compiledMethod = lambda.Compile ();
+						expression = lambda;			
+				}
+
+				object defaultValue;
+
+				public override  object DefaultValue {
+						get { return defaultValue; }
+						set { defaultValue = value; }
+				}
+
+				public override  string GetValue (object current, string format)
+				{			
+						if (compiledMethod == null) {	
+								Compile ();				 
+						}
 			
-			return returnVal;
-		}				
-		
-		public void Compile() {
-			compiledMethod = (Func<T,K>) (expression as LambdaExpression) .Compile();		 
+						string returnVal = String.Empty;
+			
+						try {
+								returnVal = String.Format (format != null ? format : "{0}", compiledMethod ((T)current));
+						} catch (Exception exp) {
+								Console.WriteLine (exp);
+						}
+			
+						return returnVal;
+				}
+
+				public void Compile ()
+				{
+						compiledMethod = (Func<T,K>)(expression as LambdaExpression).Compile ();		 
+				}
+
+				Func<T,K> compiledMethod;
 		}
-		
-		Func<T,K> compiledMethod;
-	}
 }
 

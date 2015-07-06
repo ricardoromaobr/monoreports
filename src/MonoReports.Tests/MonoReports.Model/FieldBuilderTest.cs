@@ -59,7 +59,6 @@ namespace MonoReports.Tests
 			Assert.IsNotNull( fields[0].Name);
 			
 		}
-		
 		 
 				
 				

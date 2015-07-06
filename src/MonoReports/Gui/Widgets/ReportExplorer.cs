@@ -107,7 +107,8 @@ namespace MonoReports.Gui.Widgets
 			reportNode =  theModel.AppendValues(new TreeItemWrapper("Report"));
 			parametersNode = theModel.AppendValues (reportNode,new TreeItemWrapper("Parameters"));
 			dataFieldsNode = theModel.AppendValues (reportNode,new TreeItemWrapper("Data"));
-			staticDataFieldsNode = theModel.AppendValues (reportNode,new TreeItemWrapper("Expressions"));
+			staticDataFieldsNode = theModel.AppendValues (reportNode,new TreeItemWrapper("Expressions"));			
+
 			
 			var pageNumberField = MonoReports.Model.Data.FieldBuilder.CreateFields(0,"#PageNumber",FieldKind.Expression).Single();
 			pageNumberField.Name = "#PageNumber";
@@ -115,7 +116,8 @@ namespace MonoReports.Gui.Widgets
 			numberOfPagesField.Name = "#NumberOfPages";
 			var rowNumberField = MonoReports.Model.Data.FieldBuilder.CreateFields(0,"#RowNumber",FieldKind.Expression).Single();
 			rowNumberField.Name = "#RowNumber";
-			
+
+
 			theModel.AppendValues (staticDataFieldsNode, new TreeItemWrapper(pageNumberField));
 			theModel.AppendValues (staticDataFieldsNode, new TreeItemWrapper(numberOfPagesField));
 			theModel.AppendValues (staticDataFieldsNode, new TreeItemWrapper(rowNumberField));		
